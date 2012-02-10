@@ -34,7 +34,7 @@ Output Example
 
 Let's start the watcher, it compiles everything it finds.
 
-```
+```coffee
 22:36:30 - compiled src/index.haml
 22:36:30 - compiled src/soulver.coffee
 22:36:30 - compiled src/soulver.less
@@ -56,6 +56,6 @@ bin/soulver.js: Error: Parse error on line 2: Unexpected '''
 
 We save again and it goes back in order :)
 
-```
+```coffee
 22:37:15 - compiled src/soulver.coffee
 ```
