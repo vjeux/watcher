@@ -1,4 +1,3 @@
-
  * You have a lot of CoffeeScript, Haml, SASS ... files and you want them to be automatically compiled when you save.
  * You don't want a full "IDE" like [LiveReload](http://livereload.com/) [CodeKit](http://incident57.com/codekit/) or [Compass](http://compass.handlino.com/).
 
@@ -43,7 +42,7 @@ Let's start the watcher, it compiles everything it finds.
 
 Oops, we made an error:
 
-```
+```coffee
 22:36:56 - compiled src/soulver.coffee
 bin/soulver.js: Error: Parse error on line 2: Unexpected '''
     at Object.parseError (/usr/local/lib/node_modules/coffee-script/lib/coffee-script/parser.js:470:11)
