@@ -54,7 +54,7 @@ bin/soulver.js: Error: Parse error on line 2: Unexpected '''
     at Pipe.onread (net.js:348:51)
 ```
 
-We save again and it goes back in order :)
+We fix the problem, save again and it goes back in order :)
 
 ```coffee
 22:37:15 - compiled src/soulver.coffee
