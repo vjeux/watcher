@@ -59,3 +59,5 @@ We save again and it goes back in order :)
 ```coffee
 22:37:15 - compiled src/soulver.coffee
 ```
+
+Just Ctrl+C when you are done editing the files.
