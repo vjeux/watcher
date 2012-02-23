@@ -1,0 +1,28 @@
+{
+	"name": "watcher",
+	"version": "0.0.4",
+	"description": "Recompile your Coffee/SASS/Haml/Less/... files as soon as they change",
+	"keywords": ["watch", "coffeescript", "sass", "less", "haml", "stylus", "jade"],
+	"author": {
+		"name": "Vjeux",
+		"email": "vjeuxx@gmail.com",
+		"url": "http://blog.vjeux.com/"
+	},
+	"homepage": "http://blog.vjeux.com/",
+	"files" : [
+		"src/handlers.coffee",
+		"src/optparse.coffee",
+		"src/watcher.coffee",
+		"bin/watcher"
+	],
+	"bin": {
+		"watcher": "bin/watcher"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/vjeux/watcher.git"
+	},
+	"dependencies": {
+		"coffee-script": "*"
+	}
+}
