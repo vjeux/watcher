@@ -1,6 +1,6 @@
 {
 	"name": "watcher",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "Recompile your Coffee/SASS/Haml/Less/... files as soon as they change",
 	"keywords": ["watch", "coffeescript", "sass", "less", "haml", "stylus", "jade"],
 	"author": {
