@@ -8,6 +8,12 @@
 		"email": "vjeuxx@gmail.com",
 		"url": "http://blog.vjeux.com/"
 	},
+	"contributors": [
+		{
+			"name": "HANAI Tohru",
+			"email": "hanai@pokelabo.co.jp"
+		}
+	],
 	"homepage": "http://blog.vjeux.com/",
 	"files" : [
 		"src/handlers.coffee",

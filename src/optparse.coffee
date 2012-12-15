@@ -27,7 +27,11 @@ exports.OptionParser = class OptionParser
     options = arguments: [], literals: []
     originalArgs = args
     args = normalizeArguments args
+    isOptionArgument = false
     for arg, i in args
+      if isOptionArgument
+        isOptionArgument = false
+        continue
       if arg is '--'
         pos = originalArgs.indexOf '--'
         options.arguments = [originalArgs[1 + pos]]
@@ -40,6 +44,7 @@ exports.OptionParser = class OptionParser
           value = if rule.hasArgument then args[i += 1] else true
           options[rule.name] = if rule.isList then (options[rule.name] or []).concat value else value
           matchedRule = yes
+          isOptionArgument = rule.hasArgument
           break
       throw new Error "unrecognized option: #{arg}" if isOption and not matchedRule
       if not isOption
