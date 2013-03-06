@@ -227,7 +227,8 @@ writeJs = (source, js, base) ->
 		if ext of handlers
 			handlers[ext] js, source, jsPath
 		else
-			fs.writeFile jsPath + '.' + ext, js
+			fs.writeFile jsPath + '.' + ext, js, (err) ->
+				printWarn err if err
 		timeLog "compiled #{source}"
 	fs.exists jsDir, (exists) ->
 		if exists then compile() else exec "mkdir -p #{jsDir}", compile
