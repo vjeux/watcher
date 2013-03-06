@@ -259,7 +259,7 @@ parseOptions = ->
 	o.compile     or=  !!o.output
 	o.run         = not (o.compile or o.print or o.lint)
 	o.print       = !!  (o.print or (o.eval or o.stdio and o.compile))
-	sources       = o.arguments
+	sources = (source.replace /(.)\/+$/, '$1' for source in o.arguments)
 	sourceCode[i] = null for source, i in sources
 	return
 
