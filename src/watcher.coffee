@@ -84,7 +84,7 @@ compilePath = (source, topLevel, base) ->
 				sources[index..index] = files
 				sourceCode[index..index] = files.map -> null
 				compilePath file, no, base for file in files
-		else if topLevel or path.extname(source)[1...] of handlers
+		else if topLevel or opts.output or path.extname(source)[1...] of handlers
 			watch source, base
 			fs.readFile source, (err, code) ->
 				throw err if err and err.code isnt 'ENOENT'
@@ -224,7 +224,10 @@ writeJs = (source, js, base) ->
 	jsPath = outputPath source, base
 	jsDir  = path.dirname jsPath
 	compile = ->
-		handlers[ext] js, source, jsPath
+		if ext of handlers
+			handlers[ext] js, source, jsPath
+		else
+			fs.writeFile jsPath + '.' + ext, js
 		timeLog "compiled #{source}"
 	fs.exists jsDir, (exists) ->
 		if exists then compile() else exec "mkdir -p #{jsDir}", compile
